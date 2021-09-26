@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>React Docker</title>
+  <script type="text/javascript" id="env-vars">window._env_ = {   DEFAULT_ADMIN: "test",   URL: "/",   PORTAL_URL: "/portal",   NUM_ERRORS: "4", }</script>
+</head>
+<body>
+    <b>ENVIRONMENT VARIABLES ARE:</b>
+    <ul id="env"></ul>
+</body>
+<script type="text/javascript">
+    values = ""
+    for (var key in window._env_) {
+        if (Object.prototype.hasOwnProperty.call(window._env_, key)) {
+            var val = window._env_[key];
+            values += `<li>${key}=${val}</li>`
+        }
+    }
+
+    document.getElementById("env").innerHTML = values
+</script>
+</html>
